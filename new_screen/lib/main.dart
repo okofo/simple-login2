@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'login.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -90,11 +92,15 @@ class MyHomePage extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: const  EdgeInsets.only(left:20.0, right: 10.0 , top: 40.0),
-                    child: new Container(
-                      alignment: Alignment.center,
-                      height: 70.0,
-                      decoration: new BoxDecoration(color: Colors.green , borderRadius: new BorderRadius.circular(10.0)),
-                      child: new Text('Sign In with Email', style: new TextStyle(fontSize: 20.0 , color: Colors.white),),
+                    child: GestureDetector( onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage(),));
+                    },
+                                          child: new Container(
+                        alignment: Alignment.center,
+                        height: 70.0,
+                        decoration: new BoxDecoration(color: Colors.green , borderRadius: new BorderRadius.circular(10.0)),
+                        child: new Text('Sign In with Email', style: new TextStyle(fontSize: 20.0 , color: Colors.white),),
+                      ),
                     ),
                   ),
                 )
@@ -104,10 +110,10 @@ class MyHomePage extends StatelessWidget {
               children: <Widget>[
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(left:20.0, right: 10.0 , top: 10.0),
+                    padding: const EdgeInsets.only(left:20.0, right: 10.0 , top: 20.0),
                     child: new Container(
                       alignment: Alignment.center,
-                      height: 70.0,
+                      height: 60.0,
                       decoration: new BoxDecoration(color: Colors.blue , borderRadius: new BorderRadius.circular(10.0)),
                       child: new Text('Facebook', style: new TextStyle(fontSize: 20.0 , color: Colors.white),),
                     ),
@@ -115,10 +121,10 @@ class MyHomePage extends StatelessWidget {
                 ),
                  Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(left:20.0, right: 10.0 , top: 10.0),
+                    padding: const EdgeInsets.only(left:20.0, right: 10.0 , top: 20.0),
                     child: new Container(
                       alignment: Alignment.center,
-                      height: 70.0,
+                      height: 60.0,
                       decoration: new BoxDecoration(color: Colors.red , borderRadius: new BorderRadius.circular(10.0)),
                       child: new Text('Google', style: new TextStyle(fontSize: 20.0 , color: Colors.white),),
                     ),
